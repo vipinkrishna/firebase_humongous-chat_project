@@ -62,11 +62,14 @@ messageForm.addEventListener('submit', (e) => {
 
     db.collection('chats').add({
         message: messageForm.message.value,
-        timestamp: String(Date.now())
+        // timestamp: String(Date.now())
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        // timestamp: db.ServerValue.TIMESTAMP
     });
     messageForm.message.value = '';
 
     messageForm.message.focus();
+    // console.log(firebase.firestore.FieldValue.serverTimestamp());
 });
 
 
