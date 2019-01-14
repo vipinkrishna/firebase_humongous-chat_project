@@ -31,7 +31,8 @@ function searchFilter(value) {
 function renderUser(doc) {
 
     let li = document.createElement('li');
-    let message = document.createElement('span');
+    // let message = document.createElement('span');
+    let message = document.createElement('p');
     let close = document.createElement('div');
 
     li.setAttribute('data-id', doc.id);
