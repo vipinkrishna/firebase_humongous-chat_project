@@ -14,8 +14,6 @@ body {
 
 h1 {
     color: #fff;
-    /* font-size: 64px; */
-    /* font-size: 64px; */
     letter-spacing: 2px;
     margin-bottom: 0px;
     text-align: center;
@@ -59,7 +57,6 @@ h1 {
 
 .chat {
     height: 80%;
-    /* border: 1px solid green; */
     overflow-y: scroll;
 }
 
@@ -70,38 +67,45 @@ ul#chat-list {
 
 .send {
     height: 20%;
-    /* border: 1px solid green; */
 }
 
 
 
-/* li {
+li {
+    display: flex;
+    align-items: center;
     position: relative;
-    padding: 5px 50px 5px;
-    height: 90px;
+    padding: 5px 20px 5px;
+    height: 30px;
+    width: 80%;
+    margin: 0 auto;
     background: #30ee30;
-    font-size: 20px;
+    font-size: 18px;
     color: #555;
-    margin-bottom: 5px;
-    border-radius: 15px 15px 0 0;
-    box-shadow: -3px 3px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 li span {
+    margin: 0;
+    padding: 0;
     display: block;
     letter-spacing: 2px;
-    width: 95%;
+    background: orange;
     height: 30px;
+    line-height: 30px;
 }
 
 li div {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 5px;
+    right: 10px;
     background: red;
-    box-shadow: -3px 3px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 4px 15px 4px 4px;
-    width: 50px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+    width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -116,8 +120,7 @@ li div:hover {
 
 li div:active {
     top: 6px;
-    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
-} */
+}
 
 form#send-form {
     height: 100%;
@@ -130,9 +133,7 @@ form#send-form input {
     margin: 0;
     border: 0;
     outline: none;
-    /* border: 1px solid green; */
     width: calc(100% - 110px);
-    /* background: blue; */
     border-bottom: 2px solid #eee;
     padding: 10px;
     display: block;
@@ -149,7 +150,6 @@ form#send-form input:focus {
     position: relative;
     width: 100px;
     height: 50px;
-    /* background: red; */
 }
 
 .send-btn button {
@@ -183,7 +183,7 @@ form#send-form input:focus {
 
 
 
-@media (max-width: 799px) {
+/* @media (max-width: 799px) {
     form input {
         width: 120px;
         font-size: 10px;
@@ -214,4 +214,4 @@ form#send-form input:focus {
     .container {
         max-width: 960px;
     }
-}
+} */
