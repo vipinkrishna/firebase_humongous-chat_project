@@ -59,7 +59,7 @@ h1 {
 
 .chat {
     height: 80%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     overflow-y: scroll;
 }
 
@@ -70,7 +70,7 @@ ul#chat-list {
 
 .send {
     height: 20%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 
@@ -130,8 +130,9 @@ form#send-form input {
     margin: 0;
     border: 0;
     outline: none;
-    border: 1px solid green;
-    /* width: 100%; */
+    /* border: 1px solid green; */
+    width: calc(100% - 110px);
+    /* background: blue; */
     border-bottom: 2px solid #eee;
     padding: 10px;
     display: block;
