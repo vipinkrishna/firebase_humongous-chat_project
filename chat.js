@@ -61,7 +61,8 @@ messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     db.collection('chats').add({
-        message: messageForm.message.value
+        message: messageForm.message.value,
+        timestamp: String(Date.now())
     });
     messageForm.message.value = '';
 
@@ -70,7 +71,7 @@ messageForm.addEventListener('submit', (e) => {
 
 
 // REALTIME EVENT HANDLING
-db.collection('chats').orderBy('message').onSnapshot(snapshot => {
+db.collection('chats').orderBy('timestamp').onSnapshot(snapshot => {
     
     chats = snapshot.docs;
     let changes = snapshot.docChanges();
