@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #30ee30, #308830);
+    background: linear-gradient(90deg, #1e90ff, #1ed0ff);
     font-family: Poppins, sans-serif;
     overflow-y: scroll;
 }
@@ -24,6 +24,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .search i {
@@ -39,16 +40,16 @@ h1 {
     padding: 10px 20px;
     padding-left: 40px;
     font-size: 18px;
-    margin: 10px;
+    margin: 5px;
     margin-right: -10px;
-    border-radius: 5px;
+    border-radius: 25px;
     color: #777;
+    background: #eee;
 }
 
 .container {
-    background: #fff;
+    background: #eee;
     width: 50%;
-    height: 65%;
     margin: 0 auto 30px;
     padding: 20px 30px;
     border-radius: 5px;
@@ -56,7 +57,7 @@ h1 {
 }
 
 .chat {
-    height: 80%;
+    /* height: 80%; */
     overflow-y: scroll;
 }
 
@@ -69,18 +70,15 @@ ul#chat-list {
     height: 20%;
 }
 
-
-
 li {
     display: flex;
     align-items: center;
     position: relative;
     padding: 5px 20px 5px;
     min-height: 40px;
-    /* height: auto; */
     width: 80%;
     margin: 0 auto;
-    background: lightskyblue;
+    background: #ffb;
     font-size: 18px;
     color: #555;
     margin-bottom: 10px;
@@ -93,6 +91,9 @@ li p {
     padding: 0;
     letter-spacing: 1px;
     margin-right: 30px;
+
+    overflow-wrap: break-word;
+    overflow: hidden;
 }
 
 li div {
@@ -132,49 +133,53 @@ form#send-form input {
     margin: 0;
     border: 0;
     outline: none;
-    width: calc(100% - 110px);
+    width: calc(100% - 80px);
     border-bottom: 2px solid #eee;
     padding: 10px;
     display: block;
     font-size: 18px;
     color: #666;
+    border-radius: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 form#send-form input:focus {
-    border-bottom: 2px solid #aaa;
     transition: all ease 0.3s;
 }
 
 .send-btn {
     position: relative;
-    width: 100px;
+    width: 70px;
     height: 50px;
 }
 
 .send-btn button {
     position: absolute;
-    top: 5px;
-    right: 15px;
-
+    top: 0;
+    left: 10px;
     border: 0;
-    background: #30cc30;
+    background: #ffb;
     cursor: pointer;
-    padding: 10px 20px;
-    box-shadow: -3px 3px 1px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     letter-spacing: 1px;
-    color: #fff;
+    color: #777;
     outline: none;
     user-select: none;
+    font-size: 30px;
 }
 
 .send-btn button:hover {
-    background: #30aa30;
+    background: #ffd;
 }
 
 .send-btn button:active {
-    top: 7px;
-    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5);
+    left: 9px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 
