@@ -1,0 +1,56 @@
+<!-- https://github.com/vipinkrishna -->
+
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <title>HUMONGOUS CHAT</title>
+</head>
+
+<body>
+
+    <h1>HUMONGOUS CHAT</h1>
+
+    <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="search" placeholder="Search" id="search">
+    </div>
+
+    <div class="container">
+        <div class="chat">
+            <ul id="chat-list"></ul>
+        </div>
+        <div class="send">
+            <form id="send-form">
+                <input type="text" name="name" placeholder="Type a message" required autofocus>
+                <div class="send-btn">
+                    <button>SEND</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // FIREBASE CONFIGURATION
+        var config = {
+            apiKey: "AIzaSyDxPsjG80YnPlTlKGA6mnI6nE9G6wXZBEM",
+            authDomain: "humongouschat.firebaseapp.com",
+            databaseURL: "https://humongouschat.firebaseio.com",
+            projectId: "humongouschat",
+            storageBucket: "humongouschat.appspot.com"
+        };
+
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+    <script src="chat.js"></script>
+</body>
+
+</html>
