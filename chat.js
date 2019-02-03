@@ -58,6 +58,7 @@ function renderUser(doc) {
         db.collection('chats').doc(id).delete();
 
     });
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 
@@ -74,6 +75,7 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.message.value = '';
 
     messageForm.message.focus();
+    // window.scrollTo(0, document.body.scrollHeight);
     // console.log(firebase.firestore.FieldValue.serverTimestamp());
 });
 
