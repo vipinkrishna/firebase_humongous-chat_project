@@ -6,58 +6,67 @@
     color: #ccc;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 10px;
     background: linear-gradient(90deg, #1e90ff, #1ed0ff);
     font-family: Poppins, sans-serif;
-    overflow-y: scroll;
+
+    /* overflow-y: scroll; */
 }
 
 h1 {
     color: #fff;
-    font-size: 48px;
+    font-size: 30px;
     letter-spacing: 2px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 10px;
-    width: 400px;
-    height: 80px;
+    position: relative;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto 20px;
 }
 
 .search i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
     color: #ccc;
     font-size: 30px;
-    margin-right: -55px;
     z-index: 1;
 }
 
 .search input#search {
-    width: 90%;
-    height: 90%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
     border: 0;
     outline: 0;
-    padding: 10px 20px;
-    padding-left: 60px;
-    padding-right: 20px;
-    font-size: 30px;
-    margin: 5px;
-    margin-right: -10px;
+    padding: 10px 20px 10px 60px;
+    font-size: 25px;
     border-radius: 40px;
     color: #777;
     background: #fff;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5), inset 2px 4px 16px rgba(0, 0, 0, 0.5);
 }
 
-.container {
+.conversations {
     background: #eee;
-    width: 80%;
-    margin: 0 auto 30px;
-    padding: 20px 30px;
+    /* background: #fff; */
+
+    width: 100%;
+    margin: 0;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5);
 }
@@ -68,13 +77,12 @@ h1 {
 } */
 
 ul#chat-list {
+    margin: 0;
     list-style-type: none;
     padding: 0;
 }
 
-.send {
-    height: 20%;
-}
+
 
 li {
     display: flex;
@@ -82,7 +90,7 @@ li {
     position: relative;
     padding: 5px 30px 5px;
     min-height: 60px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     background: #ffb;
     font-size: 25px;
@@ -128,29 +136,33 @@ li div:active {
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.send {
+    height: 15%;
+}
+
 form#send-form {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
-    margin-left: 80px;
+    /* margin-left: 80px; */
 }
 
 form#send-form input {
+    display: block;
     margin: 0;
     border: 0;
     outline: none;
     /* width: calc(100% - 80px); */
     width: 80%;
-    height: 80px;
-    border-bottom: 2px solid #eee;
+    height: 60px;
+    /* border-bottom: 2px solid #eee; */
     padding: 10px;
-    display: block;
     font-size: 25px;
     color: #666;
     border-radius: 40px;
-    padding-left: 45px;
+    padding-left: 25px;
     padding-right: 25px;
     background: #fff;
 }
@@ -161,27 +173,29 @@ form#send-form input {
 
 .send-btn {
     position: relative;
-    width: 190px;
+    width: 20%;
     height: 100px;
 }
 
 .send-btn button {
     position: absolute;
-    top: 5;
-    left: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 0;
-    background: #ffb;
-    cursor: pointer;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #262626;
     outline: none;
     user-select: none;
-    font-size: 50px;
+    background: #ffb;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5);
+
+    /* font-weight: lighter; */
+    letter-spacing: 1px;
+    color: #666;
+    font-size: 20px;
     transition: 0.1s;
 }
 
@@ -191,14 +205,14 @@ form#send-form input {
 }
 
 .send-btn button:active {
-    left: 19px;
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* left: 19px; */
+    width: 62px;
+    height: 62px;
+    /* box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5); */
 }
 
 
-
-
-
+/* 
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -206,6 +220,13 @@ form#send-form input {
     }
 
     li {
-        width: 85%;
+        width: 80%;
+    }
+} */
+
+
+@media (max-width: 350px) {
+    h1 {
+        font-size: 28px;
     }
 }
