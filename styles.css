@@ -137,7 +137,7 @@ li div:active {
 }
 
 .send {
-    height: 15%;
+    height: 60px;
 }
 
 form#send-form {
@@ -155,7 +155,7 @@ form#send-form input {
     border: 0;
     outline: none;
     /* width: calc(100% - 80px); */
-    width: 80%;
+    width: 78%;
     height: 60px;
     /* border-bottom: 2px solid #eee; */
     padding: 10px;
@@ -167,14 +167,11 @@ form#send-form input {
     background: #fff;
 }
 
-/* form#send-form input:focus {
-    transition: all ease 0.3s;
-} */
 
 .send-btn {
     position: relative;
     width: 20%;
-    height: 100px;
+    height: 60px;
 }
 
 .send-btn button {
