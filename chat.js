@@ -20,8 +20,13 @@ search.addEventListener('input', (e) => {
 
 //SEARCH FILTER
 function searchFilter(value) {
-    const regex = new RegExp(`${value}`, 'i');
-    filteredChats = chats.filter(doc => !Object.keys(doc.data()).every(key => regex.test(doc.data()[key]) ? false: true))
+    // const regex = new RegExp(`${value}`, 'i');
+    const regex = new RegExp(value, 'i');
+
+    // filteredChats = chats.filter(doc => !Object.keys(doc.data()).every(key => regex.test(doc.data()[key]) ? false: true))
+    filteredChats = chats.filter(doc => !(Object.keys(doc.data()).every(key => (typeof doc.data()[key] === 'object') ? true : !regex.test(doc.data()[key]))))
+
+    // console.log(filteredChats);
     chatList.innerHTML = '';  //EMPTY DOM LIST
     filteredChats.forEach(doc => renderUser(doc));
 }
