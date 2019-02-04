@@ -75,7 +75,8 @@ h1 {
 
     margin: 0;
     /* margin-bottom: 55px; */
-    margin-bottom: 130px;
+    /* margin-bottom: 130px; */
+    margin-bottom: 70px;
 
     padding: 5px;
     /* border-radius: 5px; */
@@ -125,10 +126,12 @@ li div {
     right: 10px;
     background: red;
     /* box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5); */
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    /* line-height: 40px; */
+    /* line-height: 38px; */
     text-align: center;
     cursor: pointer;
     color: #fff;
