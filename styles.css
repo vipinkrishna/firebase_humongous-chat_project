@@ -78,7 +78,10 @@ h1 {
     /* margin-bottom: 130px; */
     margin-bottom: 70px;
 
-    padding: 5px;
+    /* padding: 5px; */
+    padding: 0;
+
+
     /* border-radius: 5px; */
     /* box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5); */
 }
@@ -184,7 +187,7 @@ form#send-form input {
     border: 0;
     outline: none;
 
-    width: calc(100% - 80px);
+    width: calc(100% - 70px);
     
     height: 60px;
     font-size: 25px;
@@ -200,7 +203,7 @@ form#send-form input {
 
 .send-btn {
     position: relative;
-    width: 80px;
+    width: 60px;
     height: 60px;
 }
 
@@ -216,8 +219,9 @@ form#send-form input {
     user-select: none;
     background: #6f6;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+
+    width: 60px;
+    height: 60px;
 
     border-radius: 50%;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -232,8 +236,8 @@ form#send-form input {
 }
 
 .send-btn button:active {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 
