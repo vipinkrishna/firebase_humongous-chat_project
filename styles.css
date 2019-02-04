@@ -155,20 +155,22 @@ li div:active {
 }
 
 .send {
-    position: fixed;
-    bottom: 10px;
-    /* background: #fff; */
+    /* padding: 0; */
+    /* margin: 0; */
 
-    /* margin-top: 10px; */
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
     height: 60px;
-    width: 100%;
-    /* z-index: 10; */
+
+    /* width: 100%; */
+    /* width: 100%; */
     
 }
 
 form#send-form {
     height: 100%;
-    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -178,15 +180,13 @@ form#send-form {
 form#send-form input {
     display: block;
     margin: 0;
+    padding: 10px;
     border: 0;
     outline: none;
-    /* width: calc(100% - 80px); */
 
-    width: calc(100% - 100px);
+    width: calc(100% - 80px);
     
     height: 60px;
-    /* border-bottom: 2px solid #eee; */
-    padding: 10px;
     font-size: 25px;
     color: #666;
     border-radius: 40px;
@@ -200,7 +200,7 @@ form#send-form input {
 
 .send-btn {
     position: relative;
-    width: 100px;
+    width: 80px;
     height: 60px;
 }
 
@@ -214,8 +214,7 @@ form#send-form input {
     border: none;
     outline: none;
     user-select: none;
-    /* background: #ffb; */
-    background: #9f9;
+    background: #6f6;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -223,27 +222,18 @@ form#send-form input {
     border-radius: 50%;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 
-    /* box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5); */
-
-    /* font-weight: lighter; */
-
-    /* letter-spacing: 1px; */
-
     color: #666;
     font-size: 20px;
-    transition: 0.1s;
+    transition: 0.2s;
 }
 
 .send-btn button:hover {
     color: #fff;
-    background: #6f6;
 }
 
 .send-btn button:active {
-    /* left: 19px; */
     width: 60px;
     height: 60px;
-    /* box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5); */
 }
 
 
