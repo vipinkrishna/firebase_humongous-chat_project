@@ -30,14 +30,16 @@ function searchFilter(value) {
   console.log(regex);
 
   // filteredChats = chats.filter(doc => !Object.keys(doc.data()).every(key => regex.test(doc.data()[key]) ? false: true))
-  filteredChats = chats.filter(
-    doc =>
-      !Object.keys(doc.data()).every(key =>
-        typeof doc.data()[key] === "object"
-          ? true
-          : !regex.test(doc.data()[key])
-      )
-  );
+  // filteredChats = chats.filter(
+  //   doc =>
+  //     !Object.keys(doc.data()).every(key =>
+  //       typeof doc.data()[key] === "object"
+  //         ? true
+  //         : !regex.test(doc.data()[key])
+  //     )
+  // );
+
+  filteredChats = chats.filter(doc => Object.keys(doc.data()).some(key => ((key === "timestamp") ? false : regex.test(doc.data()[key]))));  //NEW SEARCH ALGORITHM
 
   // console.log(filteredChats);
   chatList.innerHTML = ""; //EMPTY DOM LIST
