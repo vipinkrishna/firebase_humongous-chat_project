@@ -8,6 +8,8 @@
 
 * {
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -26,14 +28,11 @@ h1 {
     margin-top: 0;
     margin-bottom: 5px;
     text-align: center;
-    /* text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5); */
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .search {
     position: relative;
-    /* width: 90%; */
-    /* max-width: 500px; */
     width: 500px;
     height: 60px;
     margin: 0 auto 10px;
@@ -61,29 +60,15 @@ h1 {
     border-radius: 40px;
     color: #777;
     background: #fff;
-    /* box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5), inset 2px 4px 16px rgba(0, 0, 0, 0.5); */
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .conversations {
-    /* background: #eee; */
-    /* background: #fff; */
     width: 100%;
-    
-    /* min-height: 63vh; */
     min-height: 10vh;
-
     margin: 0;
-    /* margin-bottom: 55px; */
-    /* margin-bottom: 130px; */
     margin-bottom: 70px;
-
-    /* padding: 5px; */
     padding: 0;
-
-
-    /* border-radius: 5px; */
-    /* box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5); */
 }
 
 
@@ -96,9 +81,9 @@ ul#chat-list {
 
 
 li {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 5px 30px 5px;
     min-height: 60px;
     width: 100%;
@@ -122,54 +107,50 @@ li p {
 }
 
 li div {
+    position: absolute;
     margin: 0;
     padding: 0;
-    position: absolute;
     top: 10px;
     right: 10px;
-    background: red;
-    /* box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.5); */
-    /* box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5); */
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+    background: #ffb;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
     width: 40px;
     height: 40px;
-    /* line-height: 40px; */
-    /* line-height: 38px; */
+    line-height: 40px;
     text-align: center;
     cursor: pointer;
-    color: #fff;
+    color: #ffb;
+    text-shadow: -1px 1px 1px rgba(0,0,0,0.5);
     user-select: none;
     border-radius: 50%;
+    outline: 0;
+    border: 0;
+    transition: 0.1s;
 }
 
 li div:hover {
-    background: #d00;
-}
-
-li div:active {
-    outline: 0;
-    /* top: 11px; */
-    top: 8px;
-    right: 8px;
-    /* box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5); */
     width: 44px;
     height: 44px;
+    top: 8px;
+    right: 8px;
     line-height: 44px;
 }
 
-.send {
-    /* padding: 0; */
-    /* margin: 0; */
+li div:active {
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    line-height: 36px;
+}
 
+.send {
     position: fixed;
     left: 10px;
     right: 10px;
     bottom: 10px;
     height: 60px;
-
-    /* width: 100%; */
-    /* width: 100%; */
-    
 }
 
 form#send-form {
@@ -226,13 +207,11 @@ form#send-form input {
     border-radius: 50%;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
 
-    color: #666;
+    color: #fff;
+    text-shadow: -1px 1px 1px rgba(0,0,0,0.5);
+
     font-size: 20px;
     transition: 0.2s;
-}
-
-.send-btn button:hover {
-    color: #fff;
 }
 
 .send-btn button:active {
